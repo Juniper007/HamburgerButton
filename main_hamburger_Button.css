@@ -1,0 +1,49 @@
+body {
+  display: flex;
+  min-height: 100vh;
+}
+main {
+  margin: auto;
+  width: 25vw;
+}
+
+input {
+  display: none;
+}
+
+svg path {
+  fill: black;
+  transform-origin: 50% 50%;
+}
+
+input:checked + label path {
+  fill: rebeccapurple;
+}
+
+.top,
+.bottom {
+  transition: all 250ms ease;
+}
+
+input:checked + label path.top,
+input:checked + label path.bottom {
+  /* display: none; */
+  opacity: 0;
+  transition: all 250ms ease;
+}
+
+.middle1,
+.middle2 {
+  transition: all 250ms ease;
+}
+
+input:checked + label path.middle1 {
+  transform: rotate(45deg);
+  transform-origin: 50% 50%;
+  transition: transform 250ms ease;
+}
+input:checked + label path.middle2 {
+  transform: rotate(-45deg);
+  transform-origin: 50% 50%;
+  transition: transform 250ms ease;
+}
